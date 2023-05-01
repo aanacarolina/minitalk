@@ -1,12 +1,12 @@
 #VARS 
 
-CLIENT_NAME = minitalk_c
-SERVER_NAME = minitalk_s
+CLIENT_NAME = client_minitalk
+SERVER_NAME = server_minitalk
 
 SRCS_CLIENT =	./client.c
 SRCS_SERVER = 	./server.c
 
-#LIBS =	...ver/libft.a\
+LIBS =	./libft.a\
 
 OBJS_C = $(patsubst %.c, %.o, $(SRCS_CLIENT))
 OBJS_S = $(patsubst %.c, %.o, $(SRCS_SERVER))
@@ -23,6 +23,9 @@ $(CLIENT_NAME) : $(OBJS_C)
 $(SERVER_NAME) : $(OBJS_S)
 	cc $(OBJS_S) $(LIBS) $(FLAGS) -o $(SERVER_NAME)
 
+$(MAKE_LIBS) :
+	make -C $(LIBFT_DIR)
+
 %.o : %.c 
 	cc $(FLAGS) -c $< -o $@  
 
@@ -35,9 +38,6 @@ fclean : clean
 	rm -f $(OBJS_S) $(SERVER_NAME)
 
 re : fclean all
-
-$(MAKE_LIBS) :
-	make -C $(LIBFT_DIR)
 
 .PHONY : all clean fclean re
 
