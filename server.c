@@ -6,7 +6,7 @@
 /*   By: anacaro3 <anacaro3@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:19:46 by anacaro3          #+#    #+#             */
-/*   Updated: 2023/05/01 14:32:14 by anacaro3         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:26:56 by anacaro3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,4 @@ int	main(void)
 	ft_printf("PID = %d\n", pid);
 	while (1)
 		pause();
+}
