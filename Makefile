@@ -1,8 +1,8 @@
 #VARS 
 NAME = minitalk
 
-CLIENT_NAME = client_minitalk
-SERVER_NAME = server_minitalk
+CLIENT_NAME = client
+SERVER_NAME = server
 
 SRCS_CLIENT =	./client.c
 SRCS_SERVER = 	./server.c
