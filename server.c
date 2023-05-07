@@ -6,7 +6,7 @@
 /*   By: anacaro3 <anacaro3@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:19:46 by anacaro3          #+#    #+#             */
-/*   Updated: 2023/05/07 11:43:37 by anacaro3         ###   ########.fr       */
+/*   Updated: 2023/05/07 17:03:10 by anacaro3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	g_char = 0;
 
-void	signal_handler(int signal, siginfo_t *siginfo, void *context)
+void	signal_handler(int signal, siginfo_t *siginfo, void *context) //prints chars received
 {
 	static int	i = 0;
 
@@ -26,7 +26,7 @@ void	signal_handler(int signal, siginfo_t *siginfo, void *context)
 		write(1, &g_char, 1);
 		g_char = 0;
 		i = 0;
-		kill(siginfo->si_pid, SIGUSR2);
+		kill(siginfo->si_pid, SIGUSR2); 
 		return ;
 	}
 	i++;

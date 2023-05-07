@@ -6,7 +6,7 @@
 /*   By: anacaro3 <anacaro3@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:19:50 by anacaro3          #+#    #+#             */
-/*   Updated: 2023/05/07 14:12:20 by anacaro3         ###   ########.fr       */
+/*   Updated: 2023/05/07 17:01:35 by anacaro3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	msg_received(int sig)
 		g_bit++;
 	else if (sig == SIGUSR2)
 	{
-		ft_putstr_fd("Sending...\n", 1);
 		g_bit++;
 	}
 	else
@@ -66,7 +65,7 @@ void	send_char(pid_t pid, char *message)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(5000);
+			usleep(20*1000);
 			shift_bits++;
 		}
 		i++;

@@ -20,12 +20,12 @@ all : $(NAME)
 
 $(NAME): $(SERVER_NAME) $(CLIENT_NAME)
 
-$(SERVER_NAME): 
+$(SERVER_NAME): $(SRCS_SERVER)
 		make -C libft
 		cc $(SRCS_SERVER) $(LIBS) $(FLAGS) -o $(SERVER_NAME)
 		@echo "\033[44mSERVER UP\033[0m"
 
-$(CLIENT_NAME): 
+$(CLIENT_NAME): $(SRCS_CLIENT)
 		make -C libft
 		cc $(SRCS_CLIENT) $(LIBS) $(FLAGS) -o $(CLIENT_NAME)
 		 @echo "\033[45mCLIENT LISTENING\033[0m"
