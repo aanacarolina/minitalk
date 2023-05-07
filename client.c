@@ -6,7 +6,7 @@
 /*   By: anacaro3 <anacaro3@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:19:50 by anacaro3          #+#    #+#             */
-/*   Updated: 2023/05/07 17:37:27 by anacaro3         ###   ########.fr       */
+/*   Updated: 2023/05/07 18:00:24 by anacaro3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	send_char(pid_t pid, char *message)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(20*1000);
+			usleep(20 * 1000);
 			shift_bits++;
 		}
 		i++;

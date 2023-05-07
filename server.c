@@ -6,7 +6,7 @@
 /*   By: anacaro3 <anacaro3@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:19:46 by anacaro3          #+#    #+#             */
-/*   Updated: 2023/05/07 17:30:01 by anacaro3         ###   ########.fr       */
+/*   Updated: 2023/05/07 18:00:01 by anacaro3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 char	g_char = 0;
 
-static void	inline	signal_handler(int signal, siginfo_t *siginfo, void *context)
+static void	inline	signal_handler(int signal, \
+siginfo_t *siginfo, void *context)
 {
 	static int	i = 0;
 
