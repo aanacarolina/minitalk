@@ -6,7 +6,7 @@
 /*   By: anacaro3 <anacaro3@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:19:50 by anacaro3          #+#    #+#             */
-/*   Updated: 2023/05/01 14:32:05 by anacaro3         ###   ########.fr       */
+/*   Updated: 2023/05/07 11:55:45 by anacaro3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ void	received(int sig)
 		g_bit++;
 	else if (sig == SIGUSR2)
 	{
-		printf("Sending...\n");
+		ft_putstr_fd("Sending...\n", 1);
 		g_bit++;
 	}
 	else
 	{
-		printf("\t[Error] - Invalid signal.\n");
+		ft_putstr_fd("\t[Error] - Invalid signal.\n", 1);
 		exit(22);
 	}
 }
 
 void	error(char *msg)
 {
-	printf("%s\n", msg);
+	ft_putstr_fd(msg, 1);
 	exit(0);
 }
 
