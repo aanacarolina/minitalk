@@ -20,19 +20,19 @@ void	received(int sig)
 		g_bit++;
 	else if (sig == SIGUSR2)
 	{
-		ft_printf("Send letter\n");
+		printf("Sending...\n");
 		g_bit++;
 	}
 	else
 	{
-		ft_printf("\tError: Signal is invalid.\n");
+		printf("\t[Error] - Invalid signal.\n");
 		exit(22);
 	}
 }
 
 void	error(char *msg)
 {
-	ft_printf("%s\n", msg);
+	printf("%s\n", msg);
 	exit(0);
 }
 
@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 	signal(SIGUSR1, received);
 	signal(SIGUSR2, received);
 	if (argc != 3)
-		error("Wrong numbers of arguments..");
+		error("ArgumentError");
 	if (check_digit(argv[1]) || ft_strlen(argv[1]) > 7)
 		error("Error PID..");
 	pid = ft_atoi(argv[1]);
